@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const port = /*process.env.PORT*/ '1337';
+const port = process.env.PORT;
 
 app.use((req, res) => {
   const software = req.headers['user-agent'].match(/\([^)]*\)/g).shift().slice(1, -1);
